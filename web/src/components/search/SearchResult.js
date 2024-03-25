@@ -49,7 +49,7 @@ function SearchResult({
       )}
       {categoriesResult.length > 0 && (
         <>
-          <ParagraphText>Categories</ParagraphText>
+          <ParagraphText>Services</ParagraphText>
           {categoriesResult.map((result) => (
             <CategorySearchResultItem key={result.id} category={result} />
           ))}
@@ -57,7 +57,7 @@ function SearchResult({
       )}
       {authorsResult.length > 0 && (
         <>
-          <ParagraphText>Authors</ParagraphText>
+          <ParagraphText>Team</ParagraphText>
           {authorsResult.map((result) => (
             <AuthorSearchResultItem key={result.id} author={result} />
           ))}

@@ -12,15 +12,15 @@ function HeroSection() {
       <div className="container">
         <div className="hero__wrapper">
           <div className="left">
-            <h1 className="hero__heading">Stepping Stones Group</h1>
+            <h1 className="hero__heading">Energy Bros Group</h1>
             <h1 className="hero__heading">Internet Cafes</h1>
             <ParagraphText className="hero__text">
-              Welcome to Stepping Stones Group Internet Cafes, your gateway to
+              Welcome to Energy Bros Group Internet Cafes, your gateway to
               seamless digital connectivity and productivity. Explore a variety
               of services uniquely created to cater to your requirements &
               enhance your online experience, whether for work, study, or
               leisure. Step into a world of convenience and innovation with
-              Stepping Stones Group.
+              Energy Bros Group.
             </ParagraphText>
             <SectionTitle>Our Expertise</SectionTitle>
             <ParagraphText className="hero__text">
@@ -67,7 +67,7 @@ function HeroSection() {
             <StaticImage
               className="hero__image"
               src="../../images/VR.jpg"
-              alt="stepping stones hero image"
+              alt="Energy Bros hero image"
               placeholder="blurred"
               objectPosition="50% 30%"
             />

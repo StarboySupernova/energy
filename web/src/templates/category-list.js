@@ -31,11 +31,11 @@ function Categories({ data, pageContext }) {
 
   return (
     <>
-      <SEO title="Categories" />
+      <SEO title="services" />
       <PageSpace top={80} bottom={100}>
         <div className="container">
           <PageHeader
-            title="All Categories"
+            title="All services"
             description="Tailored service, designed & implemented with the client in mind"
           />
           <CategoryGrid categories={categories} />
@@ -43,7 +43,7 @@ function Categories({ data, pageContext }) {
             <Pagination
               currentPage={currentPage}
               numberOfPages={numberOfPages}
-              baseURL="/categories"
+              baseURL="/services"
             />
           )}
         </div>

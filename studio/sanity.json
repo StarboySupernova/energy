@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "9ytelrml",
+    "projectId": "yqfv4c1q",
     "dataset": "production"
   },
   "project": {
-    "name": "Stepping Stones"
+    "name": "Energy Bros"
   },
   "plugins": [
     "@sanity/base",

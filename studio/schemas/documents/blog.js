@@ -27,7 +27,7 @@ export default {
       type: 'datetime', // datetime is a custom type in sanity
     },
     {
-      title: 'Category',
+      title: 'Service',
       name: 'categories',
       type: 'array',
       of: [

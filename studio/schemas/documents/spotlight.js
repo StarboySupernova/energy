@@ -2,7 +2,7 @@ import { MdStar } from 'react-icons/md';
 
 export default {
   name: 'spotlight',
-  title: 'Spotlight',
+  title: 'Featured',
   type: 'document',
   icon: MdStar,
   fields: [
@@ -13,7 +13,7 @@ export default {
     },
     {
       name: 'blogs',
-      title: 'Spotlight',
+      title: 'Featured',
       type: 'array',
       of: [
         {
@@ -33,7 +33,7 @@ export default {
       of: [
         {
           type: 'reference',
-          to: [{ type: 'service' }],
+          to: [{ type: 'category' }],
         },
       ],
       validation: (Rule) => [

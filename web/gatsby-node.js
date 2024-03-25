@@ -6,15 +6,9 @@ exports.createPages = async ({ graphql, actions }) => {
   const singleCategoryTemplate = require.resolve(
     './src/templates/single-category.js'
   );
-  const singleServiceTemplate = require.resolve(
-    './src/templates/single-service.js'
-  );
   const blogListTemplate = require.resolve('./src/templates/blog-list.js');
   const categoryListTemplate = require.resolve(
     './src/templates/category-list.js'
-  );
-  const serviceListTemplate = require.resolve(
-    './src/templates/service-list.js'
   );
   const singleAuthorTemplate = require.resolve(
     './src/templates/single-author.js'
@@ -49,14 +43,6 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      allSanityService {
-        nodes {
-          id
-          slug {
-            current
-          }
-        }
-      }
     }
   `);
 
@@ -64,7 +50,6 @@ exports.createPages = async ({ graphql, actions }) => {
   const blogs = result.data.allSanityBlog.nodes;
   const categories = result.data.allSanityCategory.nodes;
   const authors = result.data.allSanityAuthor.nodes;
-  const services = result.data.allSanityService.nodes;
 
   // creating single blog pages
   blogs.forEach((blog) => {
@@ -78,7 +63,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // creating single category pages
   categories.forEach((category) => {
     createPage({
-      path: `/categories/${category.slug.current}`,
+      path: `/services/${category.slug.current}`,
       component: singleCategoryTemplate,
       context: { id: category.id },
     });
@@ -90,15 +75,6 @@ exports.createPages = async ({ graphql, actions }) => {
       path: `/team/${author.slug.current}`,
       component: singleAuthorTemplate,
       context: { id: author.id },
-    });
-  });
-
-  //  creating single service pages
-  services.forEach((service) => {
-    createPage({
-      path: `/services/${service.slug.current}`,
-      component: singleServiceTemplate,
-      context: { id: service.id },
     });
   });
 
@@ -121,7 +97,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const totalCategoryListPages = Math.ceil(categories.length / postsPerPage);
   Array.from({ length: totalCategoryListPages }).forEach((_, index) => {
     createPage({
-      path: index === 0 ? `/categories` : `/categories/${index + 1}`,
+      path: index === 0 ? `/services` : `/services/${index + 1}`,
       component: categoryListTemplate,
       context: {
         limit: postsPerPage,
@@ -142,21 +118,6 @@ exports.createPages = async ({ graphql, actions }) => {
         limit: postsPerPage,
         offset: index * postsPerPage,
         numberOfPages: totalAuthorListPages,
-        currentPage: index + 1,
-      },
-    });
-  });
-
-  // service paginated pages
-  const totalServiceListPages = Math.ceil(services.length / 7);
-  Array.from({ length: totalServiceListPages }).forEach((_, index) => {
-    createPage({
-      path: index === 0 ? `/services` : `/services/${index + 1}`,
-      component: serviceListTemplate,
-      context: {
-        limit: 7,
-        offset: index * 7,
-        numberOfPages: totalServiceListPages,
         currentPage: index + 1,
       },
     });

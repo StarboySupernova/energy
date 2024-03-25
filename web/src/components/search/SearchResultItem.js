@@ -33,7 +33,7 @@ function CategorySearchResultItem({ category }) {
   const { closeSearchModal } = useContext(SearchModalContext);
   return (
     <SearchResultItemStyles
-      to={`/categories/${category.slug.current}`}
+      to={`/services/${category.slug.current}`}
       onClick={() => closeSearchModal()}
     >
       <Title className="title">{category.title}</Title>

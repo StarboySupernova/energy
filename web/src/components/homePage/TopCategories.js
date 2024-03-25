@@ -44,7 +44,7 @@ function TopCategories() {
         selection includes the latest in computing technology, ensuring you have
         access to cutting-edge products.
       </ParagraphText>
-      <SectionTitle>Top Categories</SectionTitle>
+      <SectionTitle>Top Services</SectionTitle>
       <ParagraphText>
         Explore Internet Excellence: Your journey begins here with us
       </ParagraphText>

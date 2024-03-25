@@ -45,7 +45,7 @@ function SingleBlog({ data }) {
   const blog = data.sanityBlog;
   return (
     <SingleBlogStyles>
-      <SEO title={`Stepping Stones-${blog.title}`} />
+      <SEO title={`Energy Bros-${blog.title}`} />
       <PageSpace top={80} bottom={100}>
         <div className="container">
           <div className="blog-header">
@@ -64,7 +64,7 @@ function SingleBlog({ data }) {
               <span>
                 {blog.categories.map((item, index) => (
                   <span key={item.slug.current}>
-                    <Link to={`/categories/${item.slug.current}`}>
+                    <Link to={`/services/${item.slug.current}`}>
                       {item.title}
                     </Link>
                     {index < blog.categories.length - 1 ? ', ' : ''}

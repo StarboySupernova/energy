@@ -3,9 +3,9 @@ const sanityConfig = require('./sanity-config.js');
 
 module.exports = {
   siteMetadata: {
-    title: `Stepping Stones Group`,
-    siteUrl: `https://steppingstonesgroup.netlify.com`,
-    description: `Stepping Stones Group Internet Cafe`,
+    title: `Energy Bros`,
+    siteUrl: `https://energybros.netlify.com`,
+    description: `Energy Bros`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -91,38 +91,6 @@ module.exports = {
         store: ['id', 'title', 'slug'],
         normalizer: ({ data }) =>
           data.allSanityCategory.nodes.map((node) => ({
-            id: node.id,
-            title: node.title,
-            slug: node.slug,
-          })),
-      },
-    },
-    {
-      resolve: `gatsby-plugin-local-search`,
-      options: {
-        name: `services`,
-        engine: `flexsearch`,
-        engineOptions: {
-          tokenize: 'forward',
-        },
-        query: `
-        {
-          allSanityService {
-            nodes{
-              id
-              title
-              slug {
-                current
-              }
-            }
-          }
-        } 
-        `,
-        ref: 'id',
-        index: ['title'],
-        store: ['id', 'title', 'slug'],
-        normalizer: ({ data }) =>
-          data.allSanityService.nodes.map((node) => ({
             id: node.id,
             title: node.title,
             slug: node.slug,

@@ -45,16 +45,16 @@ function FeaturedBlogs() {
       </ParagraphText>
       <SectionTitle>Dedication & Reliability</SectionTitle>
       <ParagraphText className="featuredBlogs__text">
-        🌐 Connect with Confidence at Stepping Stones Group Internet Cafes! 🌐
-        At Stepping Stones Group, our commitment to your connectivity is
-        unwavering. 💪 Experience the pinnacle of reliability and dedication as
-        we provide a smooth internet experience in a vibrant and comfortable
-        setting. Your productivity and customer satisfaction matters, and we're
-        here to ensure it thrives. Trust the Stepping Stones difference! 🚀💻
+        🌐 Connect with Confidence at Energy Bros Group Internet Cafes! 🌐 At
+        Energy Bros Group, our commitment to your connectivity is unwavering. 💪
+        Experience the pinnacle of reliability and dedication as we provide a
+        smooth internet experience in a vibrant and comfortable setting. Your
+        productivity and customer satisfaction matters, and we're here to ensure
+        it thrives. Trust the Energy Bros difference! 🚀💻
       </ParagraphText>
       <SectionTitle>Spotlight & Trending Posts</SectionTitle>
       <ParagraphText className="featuredBlogs__text">
-        Latest from us at Stepping Stones Group
+        Latest from us at Energy Bros Group
       </ParagraphText>
       <BlogGrid blogs={spotlightBlogs} />
     </FeaturedBlogsStyles>

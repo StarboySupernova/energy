@@ -2,7 +2,7 @@ import { MdCategory } from 'react-icons/md';
 
 export default {
   name: 'category',
-  title: 'Category',
+  title: 'Service',
   type: 'document',
   icon: MdCategory,
   fields: [
