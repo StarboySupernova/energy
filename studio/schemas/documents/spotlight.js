@@ -2,7 +2,7 @@ import { MdStar } from 'react-icons/md';
 
 export default {
   name: 'spotlight',
-  title: 'Featured',
+  title: 'Spotlight',
   type: 'document',
   icon: MdStar,
   fields: [
